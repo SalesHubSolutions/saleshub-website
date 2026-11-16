@@ -303,7 +303,7 @@ def gov():
 
 <section class="s tint"><div class="wrap split">
  <div><div class="kick">Credentials</div><h2>Small business, trusted partners.</h2>
- {checks(['Available to agencies through Carahsoft, our public-sector distributor', 'Certified Small Business, Georgia Department of Administrative Services', 'Minority-owned business, certified by USPAACC', 'Recognized by USPAACC among the Top 10 Asian American businesses in the Southeast', 'Lifetime member, Association of the United States Army (AUSA), Atlanta chapter', 'Salesforce AppExchange ISV partner', 'Research collaboration with Georgia Tech'])}</div>
+ {checks(['Available to agencies through <a class="kick" href="https://www.carahsoft.com/saleshub">Carahsoft</a>, our public-sector distributor', 'Certified Small Business, Georgia Department of Administrative Services', 'Minority-owned business, certified by USPAACC', 'Recognized by USPAACC among the Top 10 Asian American businesses in the Southeast', 'Lifetime member, Association of the United States Army (AUSA), Atlanta chapter', 'Salesforce AppExchange ISV partner', 'Research collaboration with Georgia Tech'])}</div>
  <div><div class="kick">Downloads</div><h2>For your contracting team.</h2>{docs(['capability','gov','smb','uspaacc'])}</div>
 </div></section>
 {band('Working on a solicitation or a program?', 'Talk to our government team about teaming, subcontracting or a direct engagement.', 'Contact our government team', '/contact-us?topic=gov')}'''
