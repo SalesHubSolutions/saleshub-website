@@ -193,12 +193,17 @@ def home():
   <h1>We build NPS Survey, and the teams that make Salesforce work.</h1>
   <p class="lead">SalesHub makes NPS Survey CX OS, the customer feedback app on Salesforce AppExchange. We also run dedicated QA and Salesforce teams for commercial and government clients.</p>
   <div class="cta"><a class="btn w" href="{NPS}hero">Explore NPS Survey</a><a class="btn o" href="#film">{ico('play','bi')}Watch the 75-second film</a></div>
-  <p class="proof">{ico('star','bi')}Rated 5.0 on Salesforce AppExchange · 7-day free trial</p>
  </div>
- <figure class="shot">
-  <img src="/assets/img/survey-nps-3.jpg" width="688" height="560" alt="An NPS Survey question with a score of 3 selected and the comment: we were charged twice this month and nobody has called us back about it.">
-  <figcaption class="pop">{ico('flag','pi')}<span><b>Follow-up opened</b>Score 3 · owner assigned · due in 12 h</span></figcaption>
- </figure>
+ <div class="prod">
+  <div class="top">{MARK}<div><b>NPS Survey</b><span>CX OS by SalesHub</span></div></div>
+  <ul>
+   <li>{TICK}NPS, CSAT and CES surveys that run inside Salesforce</li>
+   <li>{TICK}Every unhappy customer gets an owner and a follow-up</li>
+   <li>{TICK}Surveys in each customer's language, events and check-in</li>
+   <li>{TICK}Your data never leaves Salesforce</li>
+  </ul>
+  <div class="meta"><span>Rated 5.0 on AppExchange · 7-day free trial</span><a href="{TRIAL}">Start free trial</a></div>
+ </div>
 </div></section>
 
 <section class="trust"><div class="wrap">
@@ -212,10 +217,10 @@ def home():
  <div class="kick">Services</div>
  <h2>Three ways we help, for commercial and government teams.</h2>
  <p class="intro">The same people who build NPS Survey on Salesforce deliver our services, with a U.S. delivery lead and our client innovation center in Dhaka.</p>
- <div class="cards pics">
-  <div class="card lead">{photo(3184635, 'A team reviewing charts and test results around a table', 700, 'cimg')}<div class="cb">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div></div>
-  <div class="card">{photo(5862280, 'A laptop showing a bar chart during a working session', 700, 'cimg')}<div class="cb">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div></div>
-  <div class="card">{photo(7433869, 'Three leaders reviewing a report together at a desk', 700, 'cimg')}<div class="cb">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div></div>
+ <div class="cards">
+  <div class="card lead">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div>
+  <div class="card">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div>
+  <div class="card">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div>
  </div>
 </div></section>
 
@@ -234,17 +239,6 @@ def home():
  </div>
 </div></section>
 
-<section class="s"><div class="wrap">
- <div class="kick">The loop, in the product</div>
- <h2>From an unhappy answer to a resolved customer.</h2>
- <p class="intro">Real screens from NPS Survey CX OS, with sample data.</p>
- <ol class="loop">
-  <li><figure><img src="/assets/img/feedback-inbox.jpg" width="1400" height="410" alt="The Feedback Inbox listing a low score with a churn-risk flag and the customer's comment." loading="lazy"></figure><b>1. Every answer lands in one inbox</b><span>AI flags churn risk and sorts unhappy customers first.</span></li>
-  <li><figure><img src="/assets/img/close-the-loop-board.jpg" width="1400" height="376" alt="A board of follow-ups in Open, In progress and Closed columns, each with an owner and due date." loading="lazy"></figure><b>2. Each low score gets an owner</b><span>Follow-ups move from open to closed, with a due date and revenue at risk.</span></li>
-  <li><figure><img src="/assets/img/follow-up-closed.jpg" width="1268" height="560" alt="A closed follow-up showing it was closed in 4 minutes, on time, with the outcome recorded." loading="lazy"></figure><b>3. The customer hears back</b><span>The outcome and root cause are recorded, so leaders see what to fix.</span></li>
- </ol>
-</div></section>
-
 <section class="s tint" id="resources"><div class="wrap">
  <div class="kick">Free resources</div>
  <h2>Take something useful, no call needed.</h2>
@@ -258,13 +252,12 @@ def home():
  </div>
 </div></section>
 
-<section class="s"><div class="wrap split mid">
- <div class="pframe">{photo(8062306, 'Two colleagues talking through a plan at a laptop', 900, 'wide')}</div>
+<section class="s"><div class="wrap">
  <div>
   <div class="kick">Why SalesHub</div>
   <h2>A Salesforce product company that also delivers.</h2>
   <p class="intro">Building our own AppExchange product keeps our engineering standards high. Clients get a team that ships production Salesforce software, not just advice.</p>
-  <div class="facts two">
+  <div class="facts">
    <div class="fact">{ico('cloud')}<b>Since 2018</b><span>Salesforce consulting partner and AppExchange ISV</span></div>
    <div class="fact">{ico('pin')}<b>Marietta, Georgia</b><span>Headquarters and U.S. delivery</span></div>
    <div class="fact">{ico('globe')}<b>Dhaka, Bangladesh</b><span>Client innovation center</span></div>
@@ -283,7 +276,7 @@ def home():
  </div>
  <div class="card">{form()}</div>
 </div></section>
-<p class="credit wrap">Photos of people are stock images from Pexels and do not show SalesHub clients.</p>'''
+'''
     page('index', 'SalesHub | Makers of NPS Survey CX OS, Salesforce and QA services', 'SalesHub builds NPS Survey CX OS for Salesforce and runs dedicated QA and Salesforce teams for commercial and government clients.', body)
 
 
