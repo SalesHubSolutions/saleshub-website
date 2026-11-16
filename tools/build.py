@@ -430,7 +430,9 @@ def post_html(blocks, imgmap):
                 d = ent.get('data', {})
                 if ent.get('type') == 'IMAGE' and d.get('src'):
                     src = ('https:' + d['src'] if d['src'].startswith('//') else d['src']).split('/:/')[0]
-                    local = imgmap.get(src)
+                    local = imgmap.get(src) or imgmap.get(html.unescape(src))
+                    if not local and ('/isteam/stock/' in src or '/isteam/getty/' in src):
+                        continue  # licensed stock from the old site builder: not carried over
                     out.append(f'<figure><img loading="lazy" src="{html.escape(local or src + "/:/rs=w:1200")}" alt="{html.escape(d.get("alt", ""))}"></figure>')
                 elif ent.get('type') == 'DIVIDER':
                     out.append('<hr>')
@@ -471,6 +473,10 @@ def blog():
                 from urllib.parse import quote
                 imgmap['https://img1.wsimg.com/isteam/' + quote(rel, safe='/')] = '/blog/img/' + quote(rel, safe='/')
                 imgmap['https://img1.wsimg.com/isteam/' + rel] = '/blog/img/' + quote(rel, safe='/')
+                imgmap['https://img1.wsimg.com/isteam/' + quote(rel, safe="/'()&")] = '/blog/img/' + quote(rel, safe='/')
+                if rel.endswith('.tif.png') or rel.endswith('.tif.tiff') or '.tif.' in rel:
+                    base = rel.split('.tif.')[0] + '.tif'
+                    imgmap['https://img1.wsimg.com/isteam/' + quote(base, safe='/')] = '/blog/img/' + quote(rel, safe='/')
     posts = []
     for f in sorted(glob.glob(os.path.join(BACKUP, 'posts', '*.json'))):
         p = json.load(open(f, encoding='utf-8'))
