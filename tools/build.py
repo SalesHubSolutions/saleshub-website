@@ -56,7 +56,7 @@ def page(path, title, desc, body, active=None, schema=None, canonical=None, noin
 <meta property="og:url" content="{url}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20261116">
+<link rel="stylesheet" href="/assets/site.css?v=20261116b">
 <script type="application/ld+json">{ld}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag("js",new Date());gtag("config","G-BF2FDR6KMM",{{linker:{{domains:["saleshub.info","npssurveys.com"]}}}});</script>
 </head>
@@ -193,34 +193,27 @@ def home():
   <h1>We build NPS Survey, and the teams that make Salesforce work.</h1>
   <p class="lead">SalesHub makes NPS Survey CX OS, the customer feedback app on Salesforce AppExchange. We also run dedicated QA and Salesforce teams for commercial and government clients.</p>
   <div class="cta"><a class="btn w" href="{NPS}hero">Explore NPS Survey</a><a class="btn o" href="#film">{ico('play','bi')}Watch the 75-second film</a></div>
+  <p class="proof">{ico('star','bi')}5.0 on Salesforce AppExchange · 7-day free trial</p>
  </div>
- <div class="prod">
-  <div class="top">{MARK}<div><b>NPS Survey</b><span>CX OS by SalesHub</span></div></div>
-  <ul>
-   <li>{TICK}NPS, CSAT and CES surveys that run inside Salesforce</li>
-   <li>{TICK}Every unhappy customer gets an owner and a follow-up</li>
-   <li>{TICK}Surveys in each customer's language, events and check-in</li>
-   <li>{TICK}Your data never leaves Salesforce</li>
-  </ul>
-  <div class="meta"><span>Rated 5.0 on AppExchange · 7-day free trial</span><a href="{TRIAL}">Start free trial</a></div>
- </div>
+ <div><div class="panel" role="img" aria-label="Product illustration of the NPS Survey CX Command Center with sample data">
+  <div class="ph">{MARK}<b>CX Command Center</b><span class="scope">All accounts · this quarter</span></div>
+  <div class="kpis"><div class="kpi"><small>NPS</small><b>+42</b><em>up 9 this quarter</em></div><div class="kpi"><small>Detractors followed up</small><b>96%</b><em>within 5 days</em></div><div class="kpi"><small>Responses</small><b>4,812</b><em>this quarter</em></div></div>
+  <div class="trend"><svg viewBox="0 0 300 70" width="100%" height="64" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="ga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#002FA7" stop-opacity=".22"/><stop offset="1" stop-color="#002FA7" stop-opacity="0"/></linearGradient></defs><path d="M0 52 L43 46 L86 49 L129 38 L172 41 L215 30 L258 26 L300 18 L300 70 L0 70Z" fill="url(#ga)"/><path d="M0 52 L43 46 L86 49 L129 38 L172 41 L215 30 L258 26 L300 18" fill="none" stroke="#002FA7" stroke-width="3" stroke-linejoin="round"/><circle cx="300" cy="18" r="4.5" fill="#002FA7"/></svg><small>Satisfaction, last 8 weeks</small></div>
+  <div class="feed"><div class="row"><span class="d" style="background:#EB5757"></span><span class="n">Acme Corp · Case 08812 closed</span><span class="a" style="color:#D64545">Follow-up opened</span><span class="s">3</span></div><div class="row"><span class="d" style="background:#E9A52B"></span><span class="n">Northwind · Renewal won</span><span class="a" style="color:#B9801A">30-day check-in</span><span class="s">7</span></div><div class="row"><span class="d" style="background:#23A96A"></span><span class="n">Lakeside Clinics · Onboarding done</span><span class="a" style="color:#1E9A5B">Review request sent</span><span class="s">10</span></div></div>
+ </div><div class="sample">Product illustration · sample data</div></div>
 </div></section>
 
-<section class="trust"><div class="wrap">
- <span>{ico('cloud','ti')}Salesforce AppExchange partner since 2018</span>
- <span>{ico('badge','ti')}Georgia-certified small business</span>
- <span>{ico('gov','ti')}Buy through Carahsoft or CoreTrust</span>
- <span>{ico('globe','ti')}Marietta, Georgia and Dhaka</span>
-</div></section>
+<section class="statband" aria-label="At a glance"><div class="wrap"><div><b>5.0</b> on AppExchange · 7 reviews</div><div><b>2018</b> Salesforce partner since</div><div><b>2</b> delivery centers, Marietta and Dhaka</div><div><b>GA</b> certified small business</div></div></section>
+<section class="badges"><div class="wrap"><span class="bdg"><img src="/assets/ill/salesforce.svg" alt="Salesforce" width="56" height="40"><span>Salesforce partner · <b>NPS Survey on AppExchange</b></span></span><span class="bdg"><img src="/assets/ill/carahsoft.svg" alt="Carahsoft" width="120" height="30"><span>Public-sector buying<br><b>through Carahsoft</b></span></span><span class="bdg">{ico('gov','ti')}<span>Cooperative contract<br><b>CoreTrust 24COR-018GR</b></span></span></div></section>
 
 <section class="s" id="services"><div class="wrap">
  <div class="kick">Services</div>
  <h2>Three ways we help, for commercial and government teams.</h2>
  <p class="intro">The same people who build NPS Survey on Salesforce deliver our services, with a U.S. delivery lead and our client innovation center in Dhaka.</p>
  <div class="cards">
-  <div class="card lead">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div>
-  <div class="card">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div>
-  <div class="card">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div>
+  <div class="card lead ill"><img class="cil" src="/assets/ill/teams.svg" alt="A dedicated team working side by side on shared dashboards" loading="lazy" width="1600" height="880"><div class="cb">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div></div>
+  <div class="card ill"><img class="cil" src="/assets/ill/partners.svg" alt="A team working through a Salesforce rollout plan" loading="lazy" width="1600" height="880"><div class="cb">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div></div>
+  <div class="card ill"><img class="cil" src="/assets/ill/story-public.svg" alt="A resident rates a permit visit 10 out of 10 at a government service counter" loading="lazy" width="1600" height="880"><div class="cb">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div></div>
  </div>
 </div></section>
 
@@ -252,12 +245,13 @@ def home():
  </div>
 </div></section>
 
-<section class="s"><div class="wrap">
+<section class="s"><div class="wrap split mid">
+ <figure class="illf"><img src="/assets/ill/solution.svg" alt="A low score goes into Salesforce, opens a follow-up for the right person, and the customer says thanks for calling back so fast" loading="lazy" width="1600" height="880"></figure>
  <div>
   <div class="kick">Why SalesHub</div>
   <h2>A Salesforce product company that also delivers.</h2>
   <p class="intro">Building our own AppExchange product keeps our engineering standards high. Clients get a team that ships production Salesforce software, not just advice.</p>
-  <div class="facts">
+  <div class="facts two">
    <div class="fact">{ico('cloud')}<b>Since 2018</b><span>Salesforce consulting partner and AppExchange ISV</span></div>
    <div class="fact">{ico('pin')}<b>Marietta, Georgia</b><span>Headquarters and U.S. delivery</span></div>
    <div class="fact">{ico('globe')}<b>Dhaka, Bangladesh</b><span>Client innovation center</span></div>

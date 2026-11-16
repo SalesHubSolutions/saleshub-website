@@ -133,3 +133,19 @@ footer{border-top:1px solid var(--line);padding:48px 0 32px;color:var(--grey);fo
 .small{font-size:15px;color:var(--grey);margin-top:18px}.small a{color:var(--link)}
 .credit{font-size:12.5px;color:var(--grey);padding-top:18px;padding-bottom:18px}
 @media (max-width:900px){.loop{grid-template-columns:1fr}.pop{left:12px;bottom:-18px}.facts.two{grid-template-columns:1fr 1fr}}
+/* npssurveys-style panel, stat band, badges, illustrations */
+.panel{background:#fff;color:#0F1A3D;border-radius:20px;padding:22px;box-shadow:0 30px 80px rgba(0,10,50,.35)}
+.panel .ph{display:flex;align-items:center;gap:10px}.panel .ph svg{width:30px;height:30px}.panel .ph b{font-size:16px}
+.panel .scope{margin-left:auto;font-size:12px;color:#5C6784;background:#EDF1FB;padding:4px 10px;border-radius:999px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.kpi{background:#F5F7FC;border-radius:12px;padding:10px 12px}.kpi small{display:block;font-size:11.5px;color:#5C6784}.kpi b{display:block;font-size:22px;letter-spacing:-.02em}.kpi em{font-style:normal;font-size:11.5px;color:#1E9A5B}
+.trend{margin-top:12px;border:1px solid #E6EBF5;border-radius:12px;padding:10px 12px 8px}.trend small{font-size:11.5px;color:#5C6784}
+.feed{margin-top:10px}.feed .row{display:grid;grid-template-columns:10px 1fr auto 28px;gap:10px;align-items:center;padding:9px 2px;border-top:1px solid #EEF1F8;font-size:13px}
+.feed .d{width:8px;height:8px;border-radius:50%}.feed .a{font-weight:600;font-size:12px}.feed .s{font-weight:700;text-align:right}
+.sample{font-size:12px;color:var(--soft);text-align:right;margin-top:8px}
+.statband{background:#0F1A3D;color:#C9D5F2}.statband .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;padding-top:20px;padding-bottom:20px;font-size:15px}.statband b{color:#fff;font-size:18px;margin-right:6px}
+.badges{background:var(--k3)}.badges .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding-top:18px;padding-bottom:18px}
+.bdg{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:14px;line-height:1.3;color:var(--grey)}.bdg b{color:var(--ink)}.bdg img{height:30px;width:auto}
+.card.ill{padding:0;overflow:hidden}.card.ill .cil{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#F1F4FC}
+.illf{margin:0}.illf img{display:block;width:100%;border-radius:20px;background:#F1F4FC}
+@media (max-width:900px){.statband .wrap{justify-content:flex-start}.kpis{grid-template-columns:1fr 1fr 1fr}}
