@@ -58,6 +58,7 @@ def page(path, title, desc, body, active=None, schema=None, canonical=None, noin
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">{ld}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag("js",new Date());gtag("config","G-BF2FDR6KMM",{{linker:{{domains:["saleshub.info","npssurveys.com"]}}}});</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
