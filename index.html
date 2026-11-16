@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SalesHub | Makers of NPS Survey CX OS for Salesforce</title>
+<meta name="description" content="SalesHub builds NPS Survey CX OS, the customer experience platform built natively on Salesforce. Implementation and Salesforce services from the team that builds it.">
+<meta name="theme-color" content="#002FA7">
+<link rel="icon" type="image/svg+xml" href="https://www.npssurveys.com/favicon.svg">
+<link rel="canonical" href="https://saleshub.info/">
+<meta property="og:title" content="SalesHub | Makers of NPS Survey CX OS">
+<meta property="og:description" content="We build NPS Survey CX OS, the customer experience platform for Salesforce.">
+<meta property="og:image" content="https://www.npssurveys.com/share.png">
+<meta property="og:url" content="https://saleshub.info/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SalesHub, LLC","url":"https://saleshub.info/","logo":"https://www.npssurveys.com/brand/logo-kit/png/nps-survey-app-icon.png","email":"support@saleshub.info","telephone":"+1-833-733-2468","foundingDate":"2018","address":{"@type":"PostalAddress","streetAddress":"1853 Piedmont Rd NE, Suite 301","addressLocality":"Marietta","addressRegion":"GA","postalCode":"30066","addressCountry":"US"},"sameAs":["https://www.linkedin.com/company/saleshubinc","https://www.youtube.com/@saleshubllc","https://www.npssurveys.com"]}</script>
+<style>
+:root{--k:#002FA7;--k2:#EDF1FB;--k3:#F5F7FC;--soft:#C9D5F2;--ink:#0F1A3D;--grey:#5C6784;--line:#E3E8F3;--bg:#fff;--card:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--ink:#EEF2FB;--grey:#A9B4CF;--line:#24305A;--bg:#0B1430;--card:#111C40;--k3:#0F1A3D;--k2:#17245A}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:2px solid var(--k);outline-offset:3px;border-radius:6px}
+.blue :focus-visible{outline-color:#fff}
+/* header */
+header{background:var(--k);color:#fff;position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.word{font-weight:700;font-size:22px;letter-spacing:-.02em;text-decoration:none}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:15px;font-weight:500}
+.nav ul a{text-decoration:none;opacity:.88}.nav ul a:hover{opacity:1;text-decoration:underline}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:12px 20px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn.w{background:#fff;color:var(--k)}.btn.o{border-color:rgba(255,255,255,.55);color:#fff}.btn.o:hover{border-color:#fff}
+.btn.k{background:var(--k);color:#fff}.btn.ko{border-color:var(--k);color:var(--k)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .btn.ko{border-color:#9DB4FF;color:#9DB4FF}}
+/* hero */
+.hero{background:var(--k);color:#fff;padding:72px 0 96px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:700}
+.hero p.lead{font-size:19px;color:var(--soft);margin-top:20px;max-width:560px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.prod{background:#fff;color:#0F1A3D;border-radius:24px;padding:32px;box-shadow:0 30px 80px rgba(0,10,50,.35)}
+.prod .top{display:flex;align-items:center;gap:14px}
+.prod .top b{display:block;font-size:22px;letter-spacing:-.01em}.prod .top span{font-size:14px;color:#5C6784}
+.prod ul{list-style:none;margin:22px 0 0}
+.prod li{display:flex;gap:12px;padding:12px 0;border-top:1px solid #E6EBF5;font-size:15.5px}
+.prod li:first-child{border-top:0}
+.tick{flex:none;width:22px;height:22px;border-radius:50%;background:#EDF1FB;display:grid;place-items:center;margin-top:1px}
+.prod .meta{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:14px;color:#5C6784;gap:12px;flex-wrap:wrap}
+.prod .meta a{color:#002FA7;font-weight:600}
+/* sections */
+section.s{padding:88px 0}
+.s.tint{background:var(--k3)}
+.kick{font-size:15px;font-weight:600;color:var(--k)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .kick{color:#9DB4FF}}
+h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.025em;line-height:1.1;margin-top:8px;max-width:720px}
+.s p.intro{color:var(--grey);font-size:18px;max-width:680px;margin-top:14px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 1px 2px rgba(15,26,61,.04),0 8px 24px rgba(15,26,61,.05)}
+.card h3{font-size:19px;letter-spacing:-.01em}
+.card p{color:var(--grey);margin-top:8px;font-size:15.5px}
+.card.lead{border:2px solid var(--k)}
+.card .tag{display:inline-block;font-size:13px;font-weight:600;color:var(--k);background:var(--k2);padding:4px 10px;border-radius:999px;margin-bottom:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .card .tag{color:#C9D5F2}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.fact b{display:block;font-size:20px;letter-spacing:-.01em}.fact span{color:var(--grey);font-size:15px}
+/* contact */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.contact .info p{color:var(--grey);margin-top:14px}
+.contact .info a{color:var(--k);font-weight:600;text-decoration:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .contact .info a{color:#9DB4FF}}
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .full{grid-column:1/-1}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:15px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+form .note{font-size:13px;color:var(--grey)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--grey);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){.hero .grid,.contact{grid-template-columns:1fr}.cards,.facts{grid-template-columns:1fr}.nav ul{display:none}.hero{padding:48px 0 64px}section.s{padding:64px 0}form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="blue"><div class="wrap nav">
+ <a class="word" href="#top" aria-label="SalesHub home">SalesHub</a>
+ <ul><li><a href="#product">NPS Survey</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+ <a class="btn w" href="https://www.npssurveys.com/?utm_source=saleshub.info&utm_medium=website&utm_campaign=company_site&utm_content=nav">See NPS Survey</a>
+</div></header>
+
+<main id="top">
+<section class="hero blue"><div class="wrap grid">
+ <div>
+  <h1>We build NPS Survey, the customer experience platform for Salesforce.</h1>
+  <p class="lead">SalesHub is a Salesforce AppExchange partner. Our flagship product, NPS Survey CX OS, turns every survey answer into action inside Salesforce, and our team helps customers implement, extend and run it.</p>
+  <div class="cta">
+   <a class="btn w" href="https://www.npssurveys.com/?utm_source=saleshub.info&utm_medium=website&utm_campaign=company_site&utm_content=hero">Explore NPS Survey</a>
+   <a class="btn o" href="#contact">Talk to our team</a>
+  </div>
+ </div>
+ <div class="prod" id="product">
+  <div class="top"><svg viewBox="0 0 100 100" width="52" height="52" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#002FA7"/><g transform="translate(18 16) scale(.64)"><path d="M31.07 77.03 A33 33 0 1 1 68.93 77.03" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/><circle cx="50" cy="83" r="7.5" fill="#fff"/></g></svg>
+   <div><b>NPS Survey</b><span>CX OS by SalesHub</span></div></div>
+  <ul>
+   <li><span class="tick"><svg width="12" height="12" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>NPS, CSAT and CES surveys that run inside Salesforce</li>
+   <li><span class="tick"><svg width="12" height="12" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Every unhappy customer gets an owner and a follow-up</li>
+   <li><span class="tick"><svg width="12" height="12" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Surveys in each customer's language, events and check-in</li>
+   <li><span class="tick"><svg width="12" height="12" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Your data never leaves Salesforce</li>
+  </ul>
+  <div class="meta"><span>Rated 5.0 on Salesforce AppExchange · 7-day free trial</span><a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FtRTKUA3&tab=e&utm_source=saleshub.info&utm_medium=website&utm_campaign=company_site">Start free trial</a></div>
+ </div>
+</div></section>
+
+<section class="s" id="services"><div class="wrap">
+ <div class="kick">Services</div>
+ <h2>Salesforce services from the team that builds NPS Survey.</h2>
+ <p class="intro">We've built on Salesforce for years. That's the expertise behind our product, and it's available to help your team get more from Salesforce.</p>
+ <div class="cards">
+  <div class="card lead"><span class="tag">Most requested</span><h3>NPS Survey setup and migration</h3><p>Go live with surveys, triggers, field mapping and close-the-loop follow-up. Moving from GetFeedback, Delighted or another tool? We move your surveys and history too.</p></div>
+  <div class="card"><h3>Sales Cloud and Service Cloud</h3><p>Implementation and improvement of Sales Cloud and Service Cloud, shaped around how your team sells and serves.</p></div>
+  <div class="card"><h3>Custom apps and integrations</h3><p>Lightning components, Apex and integrations that connect Salesforce to the rest of your business.</p></div>
+  <div class="card"><h3>Dedicated development teams</h3><p>Full-time Salesforce and software developers from our client innovation center in Dhaka, managed by our US team.</p></div>
+ </div>
+</div></section>
+
+<section class="s tint" id="about"><div class="wrap">
+ <div class="kick">About</div>
+ <h2>A Salesforce product company, founded in 2018.</h2>
+ <p class="intro">SalesHub started as a Salesforce consulting partner. What we learned in customer after customer became NPS Survey CX OS, and that product is now our focus.</p>
+ <div class="facts">
+  <div class="fact"><b>Marietta, Georgia</b><span>Headquarters</span></div>
+  <div class="fact"><b>Dhaka, Bangladesh</b><span>Client innovation center</span></div>
+  <div class="fact"><b>Salesforce AppExchange partner</b><span>NPS Survey CX OS, rated 5.0</span></div>
+ </div>
+</div></section>
+
+<section class="s" id="contact"><div class="wrap contact">
+ <div class="info">
+  <div class="kick">Contact</div>
+  <h2>Talk to our team.</h2>
+  <p>Tell us what you're working on. We reply within one business day.</p>
+  <p><a href="mailto:support@saleshub.info">support@saleshub.info</a><br><a href="tel:+18337332468">(833) 733-2468</a></p>
+  <p>1853 Piedmont Rd NE, Suite 301<br>Marietta, GA 30066</p>
+ </div>
+ <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+  <input type="hidden" name="oid" value="00D6g000001VQio">
+  <input type="hidden" name="retURL" value="https://www.npssurveys.com/thanks.html">
+  <input type="hidden" name="lead_source" value="Web">
+  <div><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
+  <div><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
+  <div><label for="em">Work email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
+  <div><label for="co">Company</label><input id="co" name="company" autocomplete="organization" required></div>
+  <div class="full"><label for="int">What can we help with?</label><select id="int">
+   <option>NPS Survey CX OS demo</option><option>NPS Survey setup or migration</option><option>Sales Cloud or Service Cloud project</option><option>Custom app or integration</option><option>Dedicated development team</option><option>Something else</option></select></div>
+  <div class="full"><label for="msg">Message (optional)</label><textarea id="msg"></textarea></div>
+  <div class="full"><button class="btn k" type="submit">Send</button> <span class="note">&nbsp;We use your details only to reply.</span></div>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 SalesHub, LLC · Makers of NPS Survey CX OS</span><span><a href="https://www.npssurveys.com">npssurveys.com</a> · <a href="https://www.linkedin.com/company/saleshubinc">LinkedIn</a> · <a href="https://www.youtube.com/@saleshubllc">YouTube</a></span></div></footer>
+<script>
+// Fold the optional message into the Salesforce description field on submit.
+document.querySelector('form').addEventListener('submit',function(){var s=this.querySelector('#int'),m=this.querySelector('#msg');var d=document.createElement('input');d.type='hidden';d.name='description';d.value=s.value+(m.value?': '+m.value:'')+' (saleshub.info)';s.removeAttribute('name');m.removeAttribute('name');this.appendChild(d);});
+</script>
+</body>
+</html>
