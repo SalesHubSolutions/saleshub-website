@@ -82,7 +82,7 @@ def page(path, title, desc, body, active=None, schema=None, canonical=None, noin
 </div></footer>
 <script>
 (function(){{var b=document.querySelector('.menu'),u=document.getElementById('navlist');b.addEventListener('click',function(){{var o=u.classList.toggle('open');b.setAttribute('aria-expanded',o)}});
-var f=document.querySelector('form.lead');if(f)f.addEventListener('submit',function(){{var s=f.querySelector('#int'),m=f.querySelector('#msg'),d=document.createElement('input');d.type='hidden';d.name='description';d.value=s.value+(m.value?': '+m.value:'')+' ('+location.pathname+')';s.removeAttribute('name');m.removeAttribute('name');f.appendChild(d);}});}})();
+var f=document.querySelector('form.lead');if(f)f.addEventListener('submit',function(){{var s=f.querySelector('#int'),m=f.querySelector('#msg'),d=document.createElement('input');d.type='hidden';d.name='description';d.value=s.value+(m.value?': '+m.value:'')+' ('+location.pathname+')';s.removeAttribute('name');m.removeAttribute('name');f.appendChild(d);try{{gtag('event','ads_conversion_Contact_Us_1');gtag('event','generate_lead',{{form:'saleshub.info',interest:s.value}})}}catch(_){{}}}});}})();
 </script>
 </body>
 </html>
@@ -160,48 +160,130 @@ def docs(keys):
 
 
 # ---------------------------------------------------------------- pages
+ICON = {
+ 'pod': '<path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="7.5" r="3.5"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.2a3.5 3.5 0 0 1 0 6.6"/>',
+ 'cloud': '<path d="M7 18h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.5 9.5 4.25 4.25 0 0 0 7 18z"/><path d="M10 13.5l1.8 1.8L15 12"/>',
+ 'gov': '<path d="M3 10h18M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18M12 3l9 5H3z"/>',
+ 'star': '<path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/>',
+ 'pin': '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+ 'globe': '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/>',
+ 'badge': '<circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/><path d="M9.5 9l1.8 1.8L14.5 7.6"/>',
+ 'calc': '<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15v2.5"/>',
+ 'doc': '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+ 'swap': '<path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5"/>',
+ 'play': '<circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/>',
+ 'chat': '<path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z"/><path d="M8.5 9.5h7M8.5 13h4"/>',
+ 'flag': '<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
+ 'check': '<circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16 9.6"/>',
+}
+def ico(k, cls='ico'):
+    return f'<span class="{cls}" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICON[k]}</svg></span>'
+
+PX = 'https://images.pexels.com/photos/{0}/pexels-photo-{0}.jpeg?auto=compress&cs=tinysrgb&w={1}'
+def photo(pid, alt, w=900, cls='ph'):
+    return f'<img class="{cls}" src="{PX.format(pid, w)}" srcset="{PX.format(pid, w)} 1x, {PX.format(pid, w*2)} 2x" alt="{alt}" loading="lazy" decoding="async">'
+FILM = 'https://www.npssurveys.com/files/'
+NPSR = 'https://www.npssurveys.com/'
+UTM = '?utm_source=saleshub.info&utm_medium=website&utm_campaign=company_site&utm_content='
+
+
 def home():
     body = f'''<section class="hero blue"><div class="wrap grid">
  <div>
   <h1>We build NPS Survey, and the teams that make Salesforce work.</h1>
   <p class="lead">SalesHub makes NPS Survey CX OS, the customer feedback app on Salesforce AppExchange. We also run dedicated QA and Salesforce teams for commercial and government clients.</p>
-  <div class="cta"><a class="btn w" href="{NPS}hero">Explore NPS Survey</a><a class="btn o" href="#services">See our services</a></div>
+  <div class="cta"><a class="btn w" href="{NPS}hero">Explore NPS Survey</a><a class="btn o" href="#film">{ico('play','bi')}Watch the 75-second film</a></div>
+  <p class="proof">{ico('star','bi')}Rated 5.0 on Salesforce AppExchange · 7-day free trial</p>
  </div>
- <div class="prod">
-  <div class="top">{MARK}<div><b>NPS Survey</b><span>CX OS by SalesHub</span></div></div>
-  <ul>
-   <li>{TICK}NPS, CSAT and CES surveys that run inside Salesforce</li>
-   <li>{TICK}Every unhappy customer gets an owner and a follow-up</li>
-   <li>{TICK}Surveys in each customer's language, events and check-in</li>
-   <li>{TICK}Your data never leaves Salesforce</li>
-  </ul>
-  <div class="meta"><span>Rated 5.0 on AppExchange · 7-day free trial</span><a href="{TRIAL}">Start free trial</a></div>
- </div>
+ <figure class="shot">
+  <img src="/assets/img/survey-nps-3.jpg" width="688" height="560" alt="An NPS Survey question with a score of 3 selected and the comment: we were charged twice this month and nobody has called us back about it.">
+  <figcaption class="pop">{ico('flag','pi')}<span><b>Follow-up opened</b>Score 3 · owner assigned · due in 12 h</span></figcaption>
+ </figure>
+</div></section>
+
+<section class="trust"><div class="wrap">
+ <span>{ico('cloud','ti')}Salesforce AppExchange partner since 2018</span>
+ <span>{ico('badge','ti')}Georgia-certified small business</span>
+ <span>{ico('gov','ti')}Buy through Carahsoft or CoreTrust</span>
+ <span>{ico('globe','ti')}Marietta, Georgia and Dhaka</span>
 </div></section>
 
 <section class="s" id="services"><div class="wrap">
  <div class="kick">Services</div>
  <h2>Three ways we help, for commercial and government teams.</h2>
  <p class="intro">The same people who build NPS Survey on Salesforce deliver our services, with a U.S. delivery lead and our client innovation center in Dhaka.</p>
- <div class="cards">
-  <div class="card lead"><span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div>
-  <div class="card"><h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div>
-  <div class="card"><h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div>
+ <div class="cards pics">
+  <div class="card lead">{photo(3184635, 'A team reviewing charts and test results around a table', 700, 'cimg')}<div class="cb">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div></div>
+  <div class="card">{photo(5862280, 'A laptop showing a bar chart during a working session', 700, 'cimg')}<div class="cb">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div></div>
+  <div class="card">{photo(7433869, 'Three leaders reviewing a report together at a desk', 700, 'cimg')}<div class="cb">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div></div>
  </div>
 </div></section>
 
-<section class="s tint"><div class="wrap">
- <div class="kick">Why SalesHub</div>
- <h2>A Salesforce product company that also delivers.</h2>
- <p class="intro">Building our own AppExchange product keeps our engineering standards high. Clients get a team that ships production Salesforce software, not just advice.</p>
- <div class="facts">
-  <div class="fact"><b>Since 2018</b><span>Salesforce consulting partner and AppExchange ISV</span></div>
-  <div class="fact"><b>Marietta, Georgia</b><span>Headquarters and U.S. delivery</span></div>
-  <div class="fact"><b>Dhaka, Bangladesh</b><span>Client innovation center</span></div>
-  <div class="fact"><b>Certified small business</b><span>State of Georgia, minority owned</span></div>
+<section class="s tint" id="film"><div class="wrap split mid">
+ <div>
+  <div class="kick">See it in 75 seconds</div>
+  <h2>A customer gives you a 3 out of 10. What happens next?</h2>
+  <p class="intro">In most companies that answer sits in a spreadsheet. In NPS Survey CX OS it opens a follow-up for the right person, inside Salesforce, so the customer hears back. Sound on, or read the captions.</p>
+  <a class="btn k" href="{NPS}film">See how it works</a>
+ </div>
+ <div class="film">
+  <video controls preload="none" playsinline poster="{FILM}NPS-CXOS-Film-poster.jpg" width="1920" height="1080">
+   <source src="{FILM}NPS-CXOS-Film-1080p.mp4" type="video/mp4">
+   <track kind="captions" src="{FILM}NPS-CXOS-Film.vtt" srclang="en" label="English" default>
+  </video>
  </div>
 </div></section>
-{band('Tell us what you are working on.', 'A 30-minute call is enough to tell you whether we are the right fit.')}'''
+
+<section class="s"><div class="wrap">
+ <div class="kick">The loop, in the product</div>
+ <h2>From an unhappy answer to a resolved customer.</h2>
+ <p class="intro">Real screens from NPS Survey CX OS, with sample data.</p>
+ <ol class="loop">
+  <li><figure><img src="/assets/img/feedback-inbox.jpg" width="1400" height="410" alt="The Feedback Inbox listing a low score with a churn-risk flag and the customer's comment." loading="lazy"></figure><b>1. Every answer lands in one inbox</b><span>AI flags churn risk and sorts unhappy customers first.</span></li>
+  <li><figure><img src="/assets/img/close-the-loop-board.jpg" width="1400" height="376" alt="A board of follow-ups in Open, In progress and Closed columns, each with an owner and due date." loading="lazy"></figure><b>2. Each low score gets an owner</b><span>Follow-ups move from open to closed, with a due date and revenue at risk.</span></li>
+  <li><figure><img src="/assets/img/follow-up-closed.jpg" width="1268" height="560" alt="A closed follow-up showing it was closed in 4 minutes, on time, with the outcome recorded." loading="lazy"></figure><b>3. The customer hears back</b><span>The outcome and root cause are recorded, so leaders see what to fix.</span></li>
+ </ol>
+</div></section>
+
+<section class="s tint" id="resources"><div class="wrap">
+ <div class="kick">Free resources</div>
+ <h2>Take something useful, no call needed.</h2>
+ <div class="cards res">
+  <a class="card r" href="{NPSR}roi/{UTM}res_roi">{ico('calc')}<h3>CX ROI calculator</h3><p>Estimate the revenue you keep by following up with unhappy customers.</p><span class="more">Open the calculator</span></a>
+  <a class="card r" href="{NPSR}business-case/{UTM}res_case">{ico('doc')}<h3>Business case builder</h3><p>A ready-to-share case for your CFO or IT leadership, filled in with your numbers.</p><span class="more">Build your case</span></a>
+  <a class="card r" href="{NPSR}switch/{UTM}res_switch">{ico('swap')}<h3>Switching from GetFeedback</h3><p>The steps, timeline and what moves over when you switch survey tools inside Salesforce.</p><span class="more">Read the guide</span></a>
+  <a class="card r" href="{FILM}SalesHub-NPS-CXOS-Public-Sector-Kit.pdf">{ico('gov')}<h3>Public-sector kit (PDF)</h3><p>Resident feedback for agencies: use cases, security and how to buy through Carahsoft or CoreTrust.</p><span class="more">Download the kit</span></a>
+  <a class="card r" href="{FILM}SalesHub-Capability-Statement.pdf">{ico('badge')}<h3>Capability statement (PDF)</h3><p>NAICS codes, certifications and past performance for contracting officers.</p><span class="more">Download the statement</span></a>
+  <a class="card r" href="{TRIAL}">{ico('check')}<h3>7-day free trial</h3><p>Install NPS Survey CX OS from AppExchange into a sandbox and try it on your own data.</p><span class="more">Start the trial</span></a>
+ </div>
+</div></section>
+
+<section class="s"><div class="wrap split mid">
+ <div class="pframe">{photo(8062306, 'Two colleagues talking through a plan at a laptop', 900, 'wide')}</div>
+ <div>
+  <div class="kick">Why SalesHub</div>
+  <h2>A Salesforce product company that also delivers.</h2>
+  <p class="intro">Building our own AppExchange product keeps our engineering standards high. Clients get a team that ships production Salesforce software, not just advice.</p>
+  <div class="facts two">
+   <div class="fact">{ico('cloud')}<b>Since 2018</b><span>Salesforce consulting partner and AppExchange ISV</span></div>
+   <div class="fact">{ico('pin')}<b>Marietta, Georgia</b><span>Headquarters and U.S. delivery</span></div>
+   <div class="fact">{ico('globe')}<b>Dhaka, Bangladesh</b><span>Client innovation center</span></div>
+   <div class="fact">{ico('badge')}<b>Certified small business</b><span>State of Georgia, minority owned</span></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="s tint" id="talk"><div class="wrap split">
+ <div>
+  <div class="kick">Talk to us</div>
+  <h2>Tell us what you are working on.</h2>
+  <p class="intro">A 30-minute call is enough to tell you whether we are the right fit. We reply within one business day.</p>
+  {checks(['A demo of NPS Survey CX OS on your type of customer', 'A sized quote for an Offshore Delivery Pod', 'Salesforce help, from a fix to a full project'])}
+  <p class="small">{ico('chat','bi')}Prefer email? <a href="mailto:{EMAIL}">{EMAIL}</a> · <a href="tel:{PHONE_TEL}">{PHONE}</a></p>
+ </div>
+ <div class="card">{form()}</div>
+</div></section>
+<p class="credit wrap">Photos of people are stock images from Pexels and do not show SalesHub clients.</p>'''
     page('index', 'SalesHub | Makers of NPS Survey CX OS, Salesforce and QA services', 'SalesHub builds NPS Survey CX OS for Salesforce and runs dedicated QA and Salesforce teams for commercial and government clients.', body)
 
 

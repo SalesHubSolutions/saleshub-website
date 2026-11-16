@@ -55,7 +55,7 @@ Request a Customized Demo</p>
 </div></footer>
 <script>
 (function(){var b=document.querySelector('.menu'),u=document.getElementById('navlist');b.addEventListener('click',function(){var o=u.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-var f=document.querySelector('form.lead');if(f)f.addEventListener('submit',function(){var s=f.querySelector('#int'),m=f.querySelector('#msg'),d=document.createElement('input');d.type='hidden';d.name='description';d.value=s.value+(m.value?': '+m.value:'')+' ('+location.pathname+')';s.removeAttribute('name');m.removeAttribute('name');f.appendChild(d);});})();
+var f=document.querySelector('form.lead');if(f)f.addEventListener('submit',function(){var s=f.querySelector('#int'),m=f.querySelector('#msg'),d=document.createElement('input');d.type='hidden';d.name='description';d.value=s.value+(m.value?': '+m.value:'')+' ('+location.pathname+')';s.removeAttribute('name');m.removeAttribute('name');f.appendChild(d);try{gtag('event','ads_conversion_Contact_Us_1');gtag('event','generate_lead',{form:'saleshub.info',interest:s.value})}catch(_){}});})();
 </script>
 </body>
 </html>
