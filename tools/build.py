@@ -211,9 +211,9 @@ def home():
  <h2>Three ways we help, for commercial and government teams.</h2>
  <p class="intro">The same people who build NPS Survey on Salesforce deliver our services, with a U.S. delivery lead and our client innovation center in Dhaka.</p>
  <div class="cards">
-  <div class="card lead ill"><img class="cil" src="/assets/ill/teams.svg" alt="A dedicated team working side by side on shared dashboards" loading="lazy" width="1600" height="880"><div class="cb">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div></div>
-  <div class="card ill"><img class="cil" src="/assets/ill/partners.svg" alt="A team working through a Salesforce rollout plan" loading="lazy" width="1600" height="880"><div class="cb">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div></div>
-  <div class="card ill"><img class="cil" src="/assets/ill/story-public.svg" alt="A resident rates a permit visit 10 out of 10 at a government service counter" loading="lazy" width="1600" height="880"><div class="cb">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div></div>
+  <div class="card lead">{ico('pod')}<span class="tag">Fixed monthly fee</span><h3>Offshore Delivery Pod</h3><p>A dedicated QA and development team that works your hours and your tools. Manual, automation and performance testing, with a named account manager and weekly reporting.</p><a class="more" href="/offshore-delivery-pod">How the pod works</a></div>
+  <div class="card">{ico('cloud')}<h3>Salesforce Services</h3><p>Implementation, integrations, custom apps and managed admin support for Sales Cloud, Service Cloud and the rest of the platform, plus NPS Survey setup and migration.</p><a class="more" href="/salesforce-services">Salesforce services</a></div>
+  <div class="card">{ico('gov')}<h3>Government Services</h3><p>Salesforce, QA, data and IT program support for federal, state and local agencies. A Georgia-certified small business with a published capability statement.</p><a class="more" href="/government-services">Government services</a></div>
  </div>
 </div></section>
 
@@ -245,13 +245,12 @@ def home():
  </div>
 </div></section>
 
-<section class="s"><div class="wrap split mid">
- <figure class="illf"><img src="/assets/ill/solution.svg" alt="A low score goes into Salesforce, opens a follow-up for the right person, and the customer says thanks for calling back so fast" loading="lazy" width="1600" height="880"></figure>
+<section class="s"><div class="wrap">
  <div>
   <div class="kick">Why SalesHub</div>
   <h2>A Salesforce product company that also delivers.</h2>
   <p class="intro">Building our own AppExchange product keeps our engineering standards high. Clients get a team that ships production Salesforce software, not just advice.</p>
-  <div class="facts two">
+  <div class="facts">
    <div class="fact">{ico('cloud')}<b>Since 2018</b><span>Salesforce consulting partner and AppExchange ISV</span></div>
    <div class="fact">{ico('pin')}<b>Marietta, Georgia</b><span>Headquarters and U.S. delivery</span></div>
    <div class="fact">{ico('globe')}<b>Dhaka, Bangladesh</b><span>Client innovation center</span></div>
