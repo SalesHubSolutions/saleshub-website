@@ -118,8 +118,15 @@
   <div><label for="ph">Phone (optional)</label><input id="ph" name="phone" type="tel" autocomplete="tel"></div>
   <div><label for="int">What can we help with?</label><select id="int" name="int"><option>Offshore Delivery Pod</option><option>Salesforce Services</option><option>Government Services</option><option>NPS Survey CX OS demo</option><option>NPS Survey setup or migration</option><option>Something else</option></select></div>
   <div class="full"><label for="msg">Tell us a little more (optional)</label><textarea id="msg" name="msg"></textarea></div>
+  <input type=hidden name='captcha_settings' value='{"keyname":"SalesHubForms","fallback":"true","orgId":"00D6g000001VQio","ts":""}'>
+  <div class="full rc" style="overflow:hidden"><div class="g-recaptcha" data-sitekey="6Lefxi4uAAAAAN1mzyHKCywsa8C3fTPJFduxsB9z" data-callback="rcOk" style="min-height:78px;transform-origin:0 0"></div><p class="rc-err" role="alert" style="color:#D64545;font-size:13px;font-weight:600;margin-top:6px" hidden>Please tick the 'I'm not a robot' box.</p></div>
   <div class="full"><button class="btn k" type="submit">Send</button> <span class="note">&nbsp;We reply within one business day and use your details only to reply.</span></div>
- </form></div>
+ </form>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+(function(){var f=document.querySelector('form.lead'),x=f.querySelector('.rc-err'),w=f.querySelector('.rc'),g=w.querySelector('.g-recaptcha');window.rcOk=function(){x.hidden=true};
+function fit(){var s=Math.min(1,w.clientWidth/304);if(!s)return;g.style.transform=s<1?'scale('+s+')':'';g.style.minHeight=g.style.height=s<1?Math.ceil(78*s)+'px':''}fit();addEventListener('resize',fit);
+f.addEventListener('submit',function(e){var r=f.querySelector('[name="g-recaptcha-response"]');if(!r||!r.value.trim()){e.preventDefault();e.stopImmediatePropagation();x.hidden=false}});})();</script></div>
 </div></section>
 
 </main>
