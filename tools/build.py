@@ -193,7 +193,7 @@ def home():
   <h1>We build NPS Survey, and the teams that make Salesforce work.</h1>
   <p class="lead">SalesHub makes NPS Survey CX OS, the customer feedback app on Salesforce AppExchange. We also run dedicated QA and Salesforce teams for commercial and government clients.</p>
   <div class="cta"><a class="btn w" href="{NPS}hero">Explore NPS Survey</a><a class="btn o" href="#film">{ico('play','bi')}Watch the 75-second film</a></div>
-  <p class="proof">{ico('star','bi')}5.0 on Salesforce AppExchange · 7-day free trial</p>
+  <p class="proof">{ico('star','bi')}5.0 on Salesforce AppExchange · 15-day free trial</p>
  </div>
  <div><div class="panel" role="img" aria-label="Product illustration of the NPS Survey CX Command Center with sample data">
   <div class="ph">{MARK}<b>CX Command Center</b><span class="scope">All accounts · this quarter</span></div>
@@ -241,7 +241,7 @@ def home():
   <a class="card r" href="{NPSR}switch/{UTM}res_switch">{ico('swap')}<h3>Switching from GetFeedback</h3><p>The steps, timeline and what moves over when you switch survey tools inside Salesforce.</p><span class="more">Read the guide</span></a>
   <a class="card r" href="{FILM}SalesHub-NPS-CXOS-Public-Sector-Kit.pdf">{ico('gov')}<h3>Public-sector kit (PDF)</h3><p>Resident feedback for agencies: use cases, security and how to buy through Carahsoft or CoreTrust.</p><span class="more">Download the kit</span></a>
   <a class="card r" href="{FILM}SalesHub-Capability-Statement.pdf">{ico('badge')}<h3>Capability statement (PDF)</h3><p>NAICS codes, certifications and past performance for contracting officers.</p><span class="more">Download the statement</span></a>
-  <a class="card r" href="{TRIAL}">{ico('check')}<h3>7-day free trial</h3><p>Install NPS Survey CX OS from AppExchange into a sandbox and try it on your own data.</p><span class="more">Start the trial</span></a>
+  <a class="card r" href="{TRIAL}">{ico('check')}<h3>15-day free trial</h3><p>Install NPS Survey CX OS from AppExchange into a sandbox and try it on your own data.</p><span class="more">Start the trial</span></a>
  </div>
 </div></section>
 
