@@ -103,6 +103,7 @@ h2{font-size:38px;line-height:1.15;letter-spacing:-.02em;font-weight:800}
 .person .lbl{display:inline-block;margin-top:8px;font-size:11.5px;font-weight:700;color:var(--k);background:var(--k2);padding:3px 9px;border-radius:999px}
 .teamshot{margin-top:24px;border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 14px 34px rgba(0,47,167,.1)}.teamshot img{width:100%;height:420px;object-fit:cover;object-position:center 78%}.teamshot figcaption{padding:16px 20px;font-size:15px;color:var(--grey)}.teamshot b{color:var(--ink)}
 .teamnote{max-width:760px;margin:26px auto 0;text-align:center;font-size:15.5px;color:var(--grey)}.teamnote b{color:var(--ink)}
+.flow6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:34px}.buynote{margin-top:22px;font-size:14.5px;color:var(--grey)}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
 .flow .card{position:relative;padding-top:34px}
 .flow .card:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:24px;width:36px;height:36px;border-radius:50%;background:var(--k);color:#fff;font-weight:800;display:grid;place-items:center;box-shadow:0 0 0 6px var(--k3)}
@@ -146,7 +147,7 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
 <body>
 <header><div class="wrap nav">
   <a href="#"><img src="/assets/pod/saleshub-wordmark-white.png" alt="SalesHub"></a>
-  <ul><li><a href="#services">Services</a></li><li><a href="#delivery">How we deliver</a></li><li><a href="#results">Results</a></li><li><a href="https://www.npssurveys.com">NPS Survey</a></li></ul>
+  <ul><li><a href="#services">Services</a></li><li><a href="#delivery">How we deliver</a></li><li><a href="#results">Results</a></li><li><a href="#how">How to buy</a></li><li><a href="https://www.npssurveys.com">NPS Survey</a></li></ul>
   <a class="btn o sm" href="/contact-us">Talk to us</a>
 </div></header>
 
@@ -223,13 +224,16 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
 </div></section>
 
 <section id="how"><div class="wrap">
- <div class="sh"><span class="eyebrow">How we start</span><h2>From first call to a working team</h2><p>A clear path, in writing, with no surprises on cost.</p></div>
- <div class="flow">
-  <div class="card"><div class="when">Week 1</div><h3>Discovery call</h3><p>We learn your product, release cadence, tools and what good looks like.</p></div>
-  <div class="card"><div class="when">Week 1 to 2</div><h3>Pod proposal</h3><p>Team plan, fixed monthly rate and service levels, in writing.</p></div>
-  <div class="card"><div class="when">Week 2 to 3</div><h3>Onboarding</h3><p>Accounts, tool access and knowledge transfer, run from a checklist with your IT team.</p></div>
-  <div class="card"><div class="when">Every week</div><h3>Delivery and reporting</h3><p>Daily standups, weekly reports and quarterly reviews from day one.</p></div>
+ <div class="sh"><span class="eyebrow">How to buy</span><h2>A simple, standard buying path</h2><p>The same paperwork your procurement team already knows. Most clients go from first call to a working team in three to four weeks.</p></div>
+ <div class="flow flow6">
+  <div class="card"><div class="when">Week 1</div><h3>Discovery call</h3><p>A free 30-minute call or Salesforce health check. We learn your goals, systems and timeline.</p></div>
+  <div class="card"><div class="when">Week 1</div><h3>Mutual NDA</h3><p>We sign a mutual NDA before you share anything sensitive. Ours or yours, usually same day.</p></div>
+  <div class="card"><div class="when">Week 1 to 2</div><h3>Proposal and SOW</h3><p>A written Statement of Work: scope, team and roles, service levels and a fixed monthly fee or fixed price per phase.</p></div>
+  <div class="card"><div class="when">Week 2</div><h3>MSA, signed once</h3><p>A Master Services Agreement covers terms, confidentiality, data protection and IP. Each new project is just a new SOW.</p></div>
+  <div class="card"><div class="when">Week 2 to 3</div><h3>Onboarding</h3><p>Accounts, VDI or tool access, security review and knowledge transfer, run from a checklist with your IT team.</p></div>
+  <div class="card"><div class="when">Every month</div><h3>One monthly invoice</h3><p>One invoice for the agreed fee, no surprise hourly bills, with a weekly report and a quarterly business review.</p></div>
  </div>
+ <p class="buynote">Public sector? Buy through Carahsoft or engage us as a subcontractor. We can also work on your paper if your procurement team prefers.</p>
 </div></section>
 
 <section class="tint"><div class="wrap rep">
