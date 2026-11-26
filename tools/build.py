@@ -126,8 +126,10 @@ def form(default=''):
     o = ''.join(f'<option{" selected" if x == default else ""}>{x}</option>' for x in opts)
     return f'''<form class="lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
   <input type="hidden" name="oid" value="00D6g000001VQio">
-  <input type="hidden" name="retURL" value="https://www.npssurveys.com/thanks.html">
-  <input type="hidden" name="lead_source" value="Web">
+  <input type="hidden" name="retURL" value="https://saleshub.info/thanks">
+  <input type="hidden" name="lead_source" value="Web - saleshub.info">
+  <input type="hidden" name="Campaign_ID" value="701QK00000qxtAc"><input type="hidden" name="member_status" value="Responded">
+  <input type="hidden" name="00NQK00000MJn21" value="Paused"><input type="hidden" name="description" value="">
   <div><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
   <div><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
   <div><label for="em">Work email</label><input id="em" name="email" type="email" autocomplete="email" required></div>

@@ -39,8 +39,10 @@
  </div>
  <form class="lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
   <input type="hidden" name="oid" value="00D6g000001VQio">
-  <input type="hidden" name="retURL" value="https://www.npssurveys.com/thanks.html">
-  <input type="hidden" name="lead_source" value="Web">
+  <input type="hidden" name="retURL" value="https://saleshub.info/thanks">
+  <input type="hidden" name="lead_source" value="Web - saleshub.info">
+  <input type="hidden" name="Campaign_ID" value="701QK00000qxtAc"><input type="hidden" name="member_status" value="Responded">
+  <input type="hidden" name="00NQK00000MJn21" value="Paused"><input type="hidden" name="description" value="">
   <div><label for="fn">First name</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
   <div><label for="ln">Last name</label><input id="ln" name="last_name" autocomplete="family-name" required></div>
   <div><label for="em">Work email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
@@ -51,7 +53,7 @@
   <div class="full"><button class="btn k" type="submit">Send</button> <span class="note">&nbsp;We reply within one business day and use your details only to reply.</span></div>
  </form>
 </div></section>
-<script>(function(){var t=new URLSearchParams(location.search).get('topic');var m={pod:'Offshore Delivery Pod',sf:'Salesforce Services',gov:'Government Services',nps:'NPS Survey CX OS demo'};if(t&&m[t])document.getElementById('int').value=m[t];})();</script>
+<script>(function(){var t=new URLSearchParams(location.search).get('topic');var m={pod:'Offshore Delivery Pod',sf:'Salesforce Services',gov:'Government Services',nps:'NPS Survey CX OS demo'};if(t&&m[t])document.getElementById('int').value=m[t];var f=document.querySelector('form.lead');if(f)f.addEventListener('submit',function(){var i=document.getElementById('int').value,g=document.getElementById('msg').value;f.querySelector('[name=description]').value='saleshub.info contact form. Need: '+i+(g?'. Notes: '+g:'');});})();</script>
 </main>
 <footer><div class="wrap">
  <div class="fgrid">

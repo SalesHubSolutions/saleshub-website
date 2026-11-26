@@ -60,6 +60,7 @@ h1 em{font-style:normal;color:var(--y)}
 .kamline{margin-top:22px;font-size:14.5px;color:#C7D3F5}.kamline b{color:#fff}
 .roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.role{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:64px 1fr;column-gap:16px;align-items:center;box-shadow:0 10px 30px rgba(0,47,167,.06)}.rph{grid-row:span 2;width:64px;height:64px;border-radius:18px;background:var(--k2);display:grid;place-items:center}.rph svg{width:30px;height:30px;stroke:var(--k);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.role h3{font-size:17px}.role p{font-size:14px;color:var(--grey)}.rnote{font-size:12.5px;color:var(--grey);margin-top:14px;text-align:right}@media(max-width:960px){.roles{grid-template-columns:1fr 1fr}}@media(max-width:560px){.roles{grid-template-columns:1fr}}
 .hsolo{grid-template-columns:1fr;text-align:center}.hsolo .lead{margin-left:auto;margin-right:auto}.hsolo .ctas,.hsolo .chips{justify-content:center}.hsolo h1{max-width:820px;margin:0 auto}
+.choose{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:30px;text-align:left}.opt{background:#fff;color:var(--ink);border-radius:18px;padding:26px}.opt h3{font-size:20px}.opt .op{font-size:15px;color:var(--grey);margin:6px 0 16px}.opt.book{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18)}.opt.book .op{color:#C7D3F5}.opt.book ul{list-style:none;margin-top:18px;display:grid;gap:8px;font-size:14.5px;color:#DCE5FB;justify-content:start}.opt.book a:not(.btn){color:#fff}.sg{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sg .full{grid-column:1/-1}.sg label{display:block;font-size:13px;font-weight:600;margin-bottom:4px}.sg input,.sg select,.sg textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}.sform .btn{margin-top:14px;border:0;cursor:pointer}.sform .fine{font-size:12.5px;color:var(--grey);margin-top:10px}.sform .fine a{color:var(--k)}@media(max-width:860px){.choose{grid-template-columns:1fr}.sg{grid-template-columns:1fr}}
 .proof{background:var(--k3);border-bottom:1px solid var(--line)}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 24px}
 .proof div{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--grey)}
@@ -148,7 +149,7 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
 <header><div class="wrap nav">
   <a href="#"><img src="/assets/pod/saleshub-wordmark-white.png" alt="SalesHub"></a>
   <ul><li><a href="#services">Services</a></li><li><a href="#delivery">How we deliver</a></li><li><a href="#results">Results</a></li><li><a href="#how">How to buy</a></li><li><a href="https://www.npssurveys.com">NPS Survey</a></li></ul>
-  <a class="btn o sm" href="/contact-us">Talk to us</a>
+  <a class="btn o sm" href="#contact">Talk to us</a>
 </div></header>
 
 <section class="hero" style="padding-top:76px">
@@ -157,7 +158,7 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
    <span class="eyebrow">Salesforce partner · IT services · Since 2018</span>
    <h1>Salesforce and IT services that <em>deliver</em>.</h1>
    <p class="lead">SalesHub is a Salesforce partner and IT services firm in Marietta, Georgia. We implement, build, test and support, led by a U.S. team and delivered with our own engineers in Bangladesh and India, so you get senior quality at a predictable cost.</p>
-   <div class="ctas"><a class="btn y" href="/contact-us">Talk to us</a><a class="btn o" href="#services">Our services</a></div>
+   <div class="ctas"><a class="btn y" href="#contact">Talk to us</a><a class="btn o" href="#services">Our services</a></div>
    <div class="chips"><span class="chip">Salesforce implementation</span><span class="chip">Apex, Flow and integrations</span><span class="chip">QA and test automation</span><span class="chip">Managed IT and data</span><span class="chip">Government</span></div>
   </div>
    </div>
@@ -258,9 +259,39 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
 
 <section class="cta" id="contact"><div class="wrap">
  <h2>Let’s talk about your Salesforce project</h2>
- <p>Implementation, development, testing or support: tell us what you need and we will come back with a plan and a clear price within two business days.</p>
- <a class="btn y" href="/contact-us">Talk to us</a>
- <ul><li>No obligation</li><li>Written plan within 2 business days</li><li>Reply within 1 business day</li></ul>
+ <p>Two easy ways to start. Either way, a real person replies, never a bot or a sales sequence.</p>
+ <div class="choose">
+  <div class="opt">
+   <h3>Send us a short note</h3>
+   <p class="op">Tell us what you need. We come back within one business day with next steps.</p>
+   <form class="sform" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+   <input type="hidden" name="oid" value="00D6g000001VQio">
+   <input type="hidden" name="retURL" value="https://saleshub.info/thanks">
+   <input type="hidden" name="lead_source" value="Web - saleshub.info">
+   <input type="hidden" name="Campaign_ID" value="701QK00000qxtAc"><input type="hidden" name="member_status" value="Responded">
+   <input type="hidden" name="00NQK00000MJn21" value="Paused">
+   <input type="hidden" name="description" value="">
+   <div class="sg">
+    <div><label for="sfn">First name</label><input id="sfn" name="first_name" autocomplete="given-name" required></div>
+    <div><label for="sln">Last name</label><input id="sln" name="last_name" autocomplete="family-name" required></div>
+    <div class="full"><label for="sem">Work email</label><input id="sem" name="email" type="email" autocomplete="email" required></div>
+    <div><label for="sco">Company</label><input id="sco" name="company" autocomplete="organization" required></div>
+    <div><label for="sph">Phone (optional)</label><input id="sph" name="phone" type="tel" autocomplete="tel"></div>
+    <div class="full"><label for="sint">What do you need?</label><select id="sint" data-l="need"><option value="Salesforce Services">Salesforce implementation or project</option><option value="Salesforce Services">Salesforce development and support</option><option value="IT Services">QA and test automation</option><option value="Salesforce Services">Application managed services (AMS)</option><option value="IT Services">IT, data or other services</option><option value="IT Services">Government project</option></select><input type="hidden" name="00NQK00000MM2jF" id="sbt" value="Salesforce Services"></div>
+    <div class="full"><label for="smsg">Anything else? (optional)</label><textarea id="smsg" data-l="msg" rows="3"></textarea></div>
+   </div>
+   <button class="btn y" type="submit">Send</button>
+   <p class="fine">We reply within one business day. We use your details only to reply. <a href="/privacy-policy">Privacy policy</a>.</p>
+  </form>
+  </div>
+  <div class="opt book">
+   <h3>Or book a call now</h3>
+   <p class="op">Pick a 30-minute slot that suits you for a free discovery call or Salesforce health check.</p>
+   <a class="btn y" href="https://calendly.com/npssurvey/demo?utm_source=saleshub.info&amp;utm_medium=website&amp;utm_campaign=services" target="_blank" rel="noopener">Book a 30-minute call</a>
+   <ul><li>Free, no obligation</li><li>Written plan and price within 2 business days</li><li>Mutual NDA available before you share details</li></ul>
+   <p class="op" style="margin-top:18px">Prefer email? <a href="mailto:support@saleshub.info">support@saleshub.info</a> &middot; (833) 733-2468</p>
+  </div>
+ </div>
 </div></section>
 
 <footer><div class="wrap">
@@ -272,5 +303,6 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
  </div>
  <div class="legal"><span>&copy; 2026 SalesHub, LLC. All rights reserved.</span><span><a href="/privacy-policy.html">Privacy</a> · <a href="/data-processing-addendum.html">Data processing addendum</a></span></div>
 </div></footer>
+<script>{const f=document.querySelector('.sform');if(f){const s=f.querySelector('#sint'),b=f.querySelector('#sbt');s.addEventListener('change',()=>{b.value=s.value});f.addEventListener('submit',()=>{const need=s.options[s.selectedIndex].text,msg=f.querySelector('#smsg').value.trim();f.querySelector('[name=description]').value='saleshub.info form. Need: '+need+(msg?'. Notes: '+msg:'')+'. Page: '+location.pathname+location.search;});}}</script>
 </body>
 </html>
