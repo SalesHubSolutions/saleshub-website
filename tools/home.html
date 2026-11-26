@@ -57,6 +57,8 @@ h1 em{font-style:normal;color:var(--y)}
 .kam .stat{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
 .kam .stat div{background:var(--k3);border-radius:12px;padding:10px 12px;font-size:12.5px;color:var(--grey)}
 .kam .stat b{display:block;font-size:20px;color:var(--k)}
+.heroart{width:100%;max-width:440px;aspect-ratio:1;margin:0 auto}.heroart .orbit{transform-origin:240px 240px;animation:spin 60s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.heroart .orbit{animation:none}}.kamline{margin-top:22px;font-size:14.5px;color:#C7D3F5}.kamline b{color:#fff}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.role{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:96px 1fr;column-gap:16px;align-items:center;box-shadow:0 10px 30px rgba(0,47,167,.06)}.rph{grid-row:span 2;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#3D6BFF,#002FA7);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}.rph img{width:88%;height:auto}.role h3{font-size:17px}.role p{font-size:14px;color:var(--grey)}.rnote{font-size:12.5px;color:var(--grey);margin-top:14px;text-align:right}@media(max-width:960px){.roles{grid-template-columns:1fr 1fr}}@media(max-width:560px){.roles{grid-template-columns:1fr}}
 .proof{background:var(--k3);border-bottom:1px solid var(--line)}
 .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:22px 24px}
 .proof div{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--grey)}
@@ -156,12 +158,30 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
    <div class="ctas"><a class="btn y" href="#contact">Book a free QA health check</a><a class="btn o" href="#how">See how a pod works</a></div>
    <div class="chips"><span class="chip">Test automation</span><span class="chip">Regression and UAT</span><span class="chip">Salesforce QA</span><span class="chip">Web and mobile</span><span class="chip">US-hours overlap</span></div>
   </div>
-  <div class="kam">
-   <span class="tag">Your point of contact</span>
-   <div class="top"><span style="flex:0 0 72px;height:72px;border-radius:50%;background:var(--k);color:#fff;display:grid;place-items:center;font-weight:800;font-size:24px">AG</span><div><h3>Abdul Gaffar</h3><div class="role">Key Account Manager, QA delivery</div></div></div>
-   <ul><li>Runs your pod day to day: standups, leave cover, tool access</li><li>Weekly status report and quarterly business review</li><li>Backup engineers when someone is out, so testing never stops</li></ul>
-   <div class="stat"><div><b>1 fee</b>per month, no hourly invoices</div><div><b>1 day</b>reply time on any concern</div></div>
-  </div>
+  <div class="heroart" aria-hidden="true"><svg viewBox="0 0 480 480" width="100%" height="100%">
+ <defs>
+  <radialGradient id="hg" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#3D6BFF"/><stop offset="1" stop-color="#002FA7"/></radialGradient>
+  <linearGradient id="hl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FB0FF" stop-opacity=".9"/><stop offset="1" stop-color="#8FB0FF" stop-opacity="0"/></linearGradient>
+ </defs>
+ <circle cx="240" cy="240" r="226" fill="none" stroke="rgba(143,176,255,.18)" stroke-width="1"/>
+ <circle cx="240" cy="240" r="176" fill="none" stroke="rgba(143,176,255,.28)" stroke-width="1" stroke-dasharray="2 8"/>
+ <g class="orbit">
+  <circle cx="240" cy="64" r="15" fill="#fff"/><path d="M233 64l5 5 9-10" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="416" cy="240" r="15" fill="#fff"/><path d="M409 240l5 5 9-10" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="416" r="15" fill="#fff"/><path d="M233 416l5 5 9-10" fill="none" stroke="#002FA7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="240" r="15" fill="#FFD60A"/><circle cx="64" cy="240" r="5" fill="#071338"/>
+  <circle cx="364" cy="116" r="6" fill="#8FB0FF"/><circle cx="116" cy="364" r="6" fill="#8FB0FF"/><circle cx="364" cy="364" r="4" fill="#fff" opacity=".7"/><circle cx="116" cy="116" r="4" fill="#fff" opacity=".7"/>
+ </g>
+ <circle cx="240" cy="240" r="118" fill="url(#hg)"/>
+ <circle cx="240" cy="240" r="118" fill="none" stroke="url(#hl)" stroke-width="2"/>
+ <g fill="#fff">
+  <rect x="186" y="200" width="108" height="10" rx="5" opacity=".95"/>
+  <rect x="186" y="222" width="80" height="10" rx="5" opacity=".6"/>
+  <rect x="186" y="244" width="96" height="10" rx="5" opacity=".6"/>
+ </g>
+ <path d="M188 280l14 14 26-30" fill="none" stroke="#FFD60A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+ <text x="240" y="335" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#C7D3F5" letter-spacing="2">RELEASE READY</text>
+</svg></div>
  </div>
 </section>
 
@@ -182,6 +202,12 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Secure by default</h3><p>We work through your VDI or Windows 365, your accounts and your access rules. Your data stays in your systems.</p></div>
   <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V8M16 15v-6"/></svg></div><h3>Reporting you can forward</h3><p>A tracked defect list backed by tickets, a weekly report and a quarterly business review for IT leadership.</p></div>
  </div>
+</div></section>
+
+<section id="roles"><div class="wrap">
+ <div class="sh"><span class="eyebrow">The people behind a pod</span><h2>Every role you need, in one team</h2><p>From the account manager who runs your pod to the engineer who signs off each release, every role is covered and accountable to your CIO.</p></div>
+ <div class="roles"><div class="role"><div class="rph"><img src="/assets/pod/roles/leader-ppl.webp" alt=""></div><h3>Key account manager</h3><p>Runs your pod day to day: daily check-ins, time and leave tracking, backup cover, and the first call for any concern.</p></div><div class="role"><div class="rph"><img src="/assets/pod/roles/leader-ops.webp" alt=""></div><h3>U.S. delivery executive</h3><p>Meets your stakeholders monthly and prepares quarterly business reviews for your CIO and IT leadership.</p></div><div class="role"><div class="rph"><img src="/assets/pod/roles/leader-mkt.webp" alt=""></div><h3>Project manager</h3><p>Plans sprints, tracks timelines and risks, and sends a weekly status report you can forward.</p></div><div class="role"><div class="rph"><img src="/assets/pod/roles/leader-ins.webp" alt=""></div><h3>Business analyst</h3><p>Turns business needs into user stories, acceptance criteria and test scenarios.</p></div><div class="role"><div class="rph"><img src="/assets/pod/roles/leader-dig.webp" alt=""></div><h3>Salesforce consultant and developer</h3><p>Designs and builds Flow, Apex, LWC, integrations and data migrations, peer reviewed.</p></div><div class="role"><div class="rph"><img src="/assets/pod/roles/leader-exp.webp" alt=""></div><h3>QA and automation engineer</h3><p>Runs manual, regression and UAT testing, builds automation suites and tracks every defect.</p></div></div>
+ <p class="rnote">Photos are illustrative.</p>
 </div></section>
 
 <section id="results"><div class="wrap">
