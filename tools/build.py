@@ -124,7 +124,7 @@ def form(default=''):
     opts = ['Offshore Delivery Pod', 'Salesforce Services', 'Government Services', 'NPS Survey CX OS demo',
             'NPS Survey setup or migration', 'Something else']
     o = ''.join(f'<option{" selected" if x == default else ""}>{x}</option>' for x in opts)
-    return f'''<form class="lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    return f'''<form class="lead" action="#" data-w2l method="POST"><input type="text" name="hp_website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
   <input type="hidden" name="oid" value="00D6g000001VQio">
   <input type="hidden" name="retURL" value="https://saleshub.info/thanks">
   <input type="hidden" name="lead_source" value="Web - saleshub.info">
@@ -138,7 +138,7 @@ def form(default=''):
   <div><label for="int">What can we help with?</label><select id="int" name="int">{o}</select></div>
   <div class="full"><label for="msg">Tell us a little more (optional)</label><textarea id="msg" name="msg"></textarea></div>
   <div class="full"><button class="btn k" type="submit">Send</button> <span class="note">&nbsp;We reply within one business day and use your details only to reply.</span></div>
- </form>'''
+ </form><script>document.querySelectorAll("form[data-w2l]").forEach(function(f){{var t=Date.now();f.addEventListener("submit",function(e){{var h=f.querySelector("[name=hp_website]");if((h&&h.value)||Date.now()-t<4000){{e.preventDefault();return}}h&&h.parentNode.removeChild(h);f.action="https://webto."+"salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"}})}});</script>'''
 
 
 DOCS = {

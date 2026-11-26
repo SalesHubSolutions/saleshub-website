@@ -289,7 +289,7 @@ section{position:relative}
   <div class="opt">
    <h3>Send us a short note</h3>
    <p class="op">Tell us what you need. We come back within one business day with next steps.</p>
-   <form class="sform" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+   <form class="sform" action="#" data-w2l method="POST"><input type="text" name="hp_website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
    <input type="hidden" name="oid" value="00D6g000001VQio">
    <input type="hidden" name="retURL" value="https://saleshub.info/thanks">
    <input type="hidden" name="lead_source" value="Web - saleshub.info">
@@ -329,5 +329,6 @@ section{position:relative}
  <div class="legal"><span>&copy; 2026 SalesHub, LLC. All rights reserved.</span><span><a href="/privacy-policy.html">Privacy</a> · <a href="/data-processing-addendum.html">Data processing addendum</a></span></div>
 </div></footer>
 <script>{const f=document.querySelector('.sform');if(f){const s=f.querySelector('#sint'),b=f.querySelector('#sbt');s.addEventListener('change',()=>{b.value=s.value});f.addEventListener('submit',()=>{const need=s.options[s.selectedIndex].text,msg=f.querySelector('#smsg').value.trim();f.querySelector('[name=description]').value='saleshub.info form. Need: '+need+(msg?'. Notes: '+msg:'')+'. Page: '+location.pathname+location.search;});}}</script>
+<script>document.querySelectorAll("form[data-w2l]").forEach(function(f){var t=Date.now();f.addEventListener("submit",function(e){var h=f.querySelector("[name=hp_website]");if((h&&h.value)||Date.now()-t<4000){e.preventDefault();return}h&&h.parentNode.removeChild(h);f.action="https://webto."+"salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"})});</script>
 </body>
 </html>

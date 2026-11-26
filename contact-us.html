@@ -37,7 +37,7 @@
   <p>1853 Piedmont Rd NE, Suite 301<br>Marietta, GA 30066</p>
   <p>Monday to Friday, 9am to 5pm Eastern</p>
  </div>
- <form class="lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+ <form class="lead" action="#" data-w2l method="POST"><input type="text" name="hp_website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
   <input type="hidden" name="oid" value="00D6g000001VQio">
   <input type="hidden" name="retURL" value="https://saleshub.info/thanks">
   <input type="hidden" name="lead_source" value="Web - saleshub.info">
@@ -68,5 +68,6 @@
 (function(){var b=document.querySelector('.menu'),u=document.getElementById('navlist');b.addEventListener('click',function(){var o=u.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 var f=document.querySelector('form.lead');if(f)f.addEventListener('submit',function(){var s=f.querySelector('#int'),m=f.querySelector('#msg'),d=document.createElement('input');d.type='hidden';d.name='description';d.value=s.value+(m.value?': '+m.value:'')+' ('+location.pathname+')';s.removeAttribute('name');m.removeAttribute('name');f.appendChild(d);try{gtag('event','ads_conversion_Contact_Us_1');gtag('event','generate_lead',{form:'saleshub.info',interest:s.value})}catch(_){}});})();
 </script>
+<script>document.querySelectorAll("form[data-w2l]").forEach(function(f){var t=Date.now();f.addEventListener("submit",function(e){var h=f.querySelector("[name=hp_website]");if((h&&h.value)||Date.now()-t<4000){e.preventDefault();return}h&&h.parentNode.removeChild(h);f.action="https://webto."+"salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"})});</script>
 </body>
 </html>
