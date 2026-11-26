@@ -144,6 +144,20 @@ footer a{text-decoration:none;color:#C7D3F5}footer a:hover{color:#fff}
 .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:#8C9AC2}
 @media(max-width:960px){.hgrid,.story,.rep,.prod,.inperson{grid-template-columns:1fr}.g3,.g4,.team,.flow{grid-template-columns:1fr 1fr}.proof .wrap{grid-template-columns:1fr 1fr}.ft{grid-template-columns:1fr 1fr}h1{font-size:40px}.nav ul{display:none}}
 @media(max-width:560px){.g3,.g4,.team,.flow,.proof .wrap,.ft{grid-template-columns:1fr}h1{font-size:34px}h2{font-size:30px}section{padding:60px 0}.kpis{grid-template-columns:1fr 1fr}}
+
+/* Brand depth: neutral base, Klein-tinted depth bands, elevated cards */
+body{background:#FAFBFD}
+section{position:relative}
+.tint,.tint2,#services,#roles,#results,#how{background:transparent}
+#services,#roles,#how{background:radial-gradient(55% 45% at 100% 0%,rgba(61,107,240,.10),transparent 72%),radial-gradient(50% 45% at 0% 100%,rgba(0,47,167,.06),transparent 72%),#FFFFFF}
+#start,#delivery,#results,.tint{background:radial-gradient(55% 45% at 0% 0%,rgba(61,107,240,.14),transparent 72%),radial-gradient(50% 45% at 100% 100%,rgba(0,47,167,.08),transparent 72%),linear-gradient(180deg,#F6F8FF 0%,#ECF1FF 100%)}
+.card,.role,.opt:not(.book),.mock{background:#fff;border:1px solid #E4EAF6;box-shadow:0 1px 2px rgba(7,19,56,.04),0 18px 40px -18px rgba(0,47,167,.22)}
+.card .ic,.rph{background:linear-gradient(145deg,#2F5BE0,#002FA7);box-shadow:0 8px 18px -8px rgba(0,47,167,.6)}
+.card .ic svg,.rph svg{stroke:#fff}
+.badge{background:#EAF0FF;color:#002FA7}
+.proof{background:#fff;border-bottom:1px solid #E4EAF6}
+.pi{background:linear-gradient(145deg,#2F5BE0,#002FA7)}
+.flow .card:before{box-shadow:0 0 0 6px #ECF1FF}
 </style>
 </head>
 <body>
