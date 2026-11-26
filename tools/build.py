@@ -599,7 +599,9 @@ def build():
     # clean generated output, keep repo files
     for d in ('blog/f',):
         shutil.rmtree(os.path.join(ROOT, d), ignore_errors=True)
-    home(); pod(); sf(); gov(); about(); contact(); careers(); security()
+    # homepage is hand-built (QA pod focus): tools/home.html
+    shutil.copyfile(os.path.join(ROOT, 'tools', 'home.html'), os.path.join(ROOT, 'index.html')); SITEMAP.append(SITE + '/')
+    pod(); sf(); gov(); about(); contact(); careers(); security()
     legal('privacy-policy', 'Privacy Policy', 'privacy', 'How SalesHub collects, uses and protects personal information.')
     legal('data-processing-addendum', 'Data Processing Addendum', 'dpa', 'The terms under which SalesHub processes personal data on behalf of customers.')
     n = blog()
